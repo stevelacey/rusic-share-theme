@@ -48,7 +48,7 @@ h3 { font-size: 1.3em; color: @baseColor; }
 #main { position: relative; }
 
 // Header
-header { margin: 0 0 40px 0; }
+header { margin: 0; }
 #top-bar { width: 820px; float: left; position: relative; padding: 15px; #gradient > .vertical(lighten(@lightColor, 20%), @lightColor; .box-shadow; .border-radius; }
 .logo { float: left; position: relative; }
 
@@ -378,6 +378,9 @@ a.feed { float: left; position: relative; display: block; height: 19px; margin: 
 }
 
 .bookmarklet {
+  display: block;
+  float: right;
+  margin: 10px;
   clear: both;
 }
 

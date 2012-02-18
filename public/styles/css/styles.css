@@ -315,7 +315,7 @@ h3 {
   position: relative;
 }
 header {
-  margin: 0 0 40px 0;
+  margin: 0;
 }
 #top-bar {
   width: 820px;
@@ -1388,6 +1388,9 @@ a.feed:hover {
   color: #b77b26;
 }
 .bookmarklet {
+  display: block;
+  float: right;
+  margin: 10px;
   clear: both;
 }
 .empty {
