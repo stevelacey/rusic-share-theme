@@ -1387,6 +1387,9 @@ a.feed:hover {
 #top-bar h1 a {
   color: #b77b26;
 }
+.bookmarklet {
+  clear: both;
+}
 .empty {
   float: left;
   position: relative;
