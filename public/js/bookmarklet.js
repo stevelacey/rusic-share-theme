@@ -11,19 +11,18 @@
 (function() {
 
   // This is the page that will display inside the iframe.
-  var iframeSrc = 'http://hectic.rusic.com/ideas/new';
-
-  // Styles for the iframe.
-  var iframeStyle = 'position: fixed; z-index: 999999; width: 500px; height: 300px; right: 0; top: 0; border: none; overflow: hidden; background-color: white;';
-
+  var iframeSrc = 'http://steve.rusic.com/share/ideas/new',
+        iframeWidth = 500,
+        iframeHeight = 300;
+  
   // Create an iframe element and set some attributes.
   var iframe = document.createElement('iframe');
-
+  
   // Pass the current url across to the space.
   iframe.setAttribute('src', iframeSrc + '?custom1=' + encodeURIComponent(window.location.href));
 
   iframe.setAttribute('id', 'rusic-modal');
-  iframe.setAttribute('style', iframeStyle);
+  iframe.setAttribute('style', 'background: white; border: 1px solid #AAA; position: fixed; z-index: 999999; width: ' + iframeWidth + 'px; height: ' + iframeHeight + 'px; top: 50%; left: 50%; margin: -' + iframeHeight / 2 + 'px 0 0 -' + iframeWidth / 2 + 'px; padding: 10px; box-shadow: 0 0 100px black; box-sizing: border-box; overflow: hidden;');
 
   // Inject the iframe into the host page.
   var body = document.getElementsByTagName('body')[0];
