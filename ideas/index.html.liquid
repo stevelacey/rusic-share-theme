@@ -23,12 +23,12 @@
 
       {% if idea.custom1 contains 'vimeo.com' %} 
         <iframe src="http://player.vimeo.com/video/{{ idea.custom1 | split: '/' | last }}" width="300" height="150" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      {% else %}
+        <a href="{{idea.permalink}}" title="link to page for {{idea.title}}">
+          <img src="http://logo.no.de/{{idea.custom1}}" alt="logo for {{idea.title}}" class="main-image" />
+        </a>
       {% endif %}
 
-      <a href="{{idea.permalink}}" title="link to page for {{idea.title}}">
-        <img src="http://logo.no.de/{{idea.custom1}}" alt="logo for {{idea.title}}" class="main-image" />
-        <img src="{{idea.images.first.medium}}" alt="photograph for {{idea.title}}" class="main-image" />
-      </a>
       <div class="meta">
         {% if idea.liked? %}
         <span class="liked">{{idea.likes}}</span>
