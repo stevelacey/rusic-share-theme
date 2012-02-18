@@ -19,7 +19,7 @@
   var iframe = document.createElement('iframe');
   
   // Pass the current url across to the space.
-  iframe.setAttribute('src', iframeSrc + '?custom1=' + encodeURIComponent(window.location.href));
+  iframe.setAttribute('src', iframeSrc + '?title=' + document.getElementsByTagName('title')[0].text.replace(/^\s+|\s+$/g, '') + '&custom1=' + encodeURIComponent(window.location.href));
 
   iframe.setAttribute('id', 'rusic-modal');
   iframe.setAttribute('style', 'background: white; border: 1px solid #AAA; position: fixed; z-index: 999999; width: ' + iframeWidth + 'px; height: ' + iframeHeight + 'px; top: 50%; left: 50%; margin: -' + iframeHeight / 2 + 'px 0 0 -' + iframeWidth / 2 + 'px; padding: 10px; box-shadow: 0 0 100px black; box-sizing: border-box; overflow: hidden;');
