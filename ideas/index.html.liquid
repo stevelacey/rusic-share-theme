@@ -22,7 +22,7 @@
     <div class="teaser">
 
       {% if idea.custom1 contains 'vimeo.com' %} 
-        <iframe src="http://player.vimeo.com/video/{{ idea.custom1 | split '/' | last }}" width="300" height="150" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="http://player.vimeo.com/video/{{ idea.custom1 | split: '/' | last }}" width="300" height="150" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
       {% endif %}
 
       <a href="{{idea.permalink}}" title="link to page for {{idea.title}}">
