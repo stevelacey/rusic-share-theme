@@ -21,7 +21,7 @@
     {% for idea in space.ideas %}
     <div class="teaser">
 
-      {% if idea.custom1 contains 'vimeo.com' %} 
+      {% if idea.custom1 contains 'vimeo.com/' %} 
         <iframe src="http://player.vimeo.com/video/{{ idea.custom1 | split: '/' | last }}" width="300" height="150" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
       {% endif %}
 
