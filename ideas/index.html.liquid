@@ -20,10 +20,11 @@
 
     {% for idea in space.ideas %}
     <div class="teaser">
-      <a href="{{idea.permalink}}" title="link to page for {{idea.title}}"><img src="{{idea.images.first.medium}}" alt="photograph for {{idea.title}}" class="main-image {{idea.custom2}}" /></a>
+      <a href="{{idea.permalink}}" title="link to page for {{idea.title}}">
+        <img src="http://logo.no.de/{{idea.custom1}}" alt="logo for {{idea.title}}" class="main-image" />
+        <img src="{{idea.images.first.medium}}" alt="photograph for {{idea.title}}" class="main-image" />
+      </a>
       <div class="meta">
-        <div class="time">{{idea.custom1}} minutes</div>
-        <div class="difficulty {{idea.custom2}}">{{idea.custom2}}</div>
         {% if idea.liked? %}
         <span class="liked">{{idea.likes}}</span>
         {% else %}
