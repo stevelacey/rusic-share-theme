@@ -124,7 +124,6 @@ table {
  * ----------------------------------------------------------------- */
 .row {
   zoom: 1;
-  margin-left: -20px;
 }
 .row:before, .row:after {
   display: table;
@@ -938,9 +937,8 @@ footer {
   width: 225px;
 }
 .add-new #items-list, .add-new #content-input {
-  height: 500px;
-  padding: 0 15px 0 25px;
-  background: url(../../img/note-bg.png) repeat-y #ffffff;
+  height: 100px;
+  padding: 5px;
   line-height: 30px;
   color: #999999;
 }

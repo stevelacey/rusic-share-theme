@@ -104,12 +104,12 @@
           {% else %}
           <span class="btn add disabled">Add {{ theme.idea_context | capitalize }}</span>
           {% endif %}
+
+          <a href="javascript: (function() {var s = document.createElement('script'); s.setAttribute('src','{{ asset_url }}/js/bookmarklet.js'); document.body.appendChild(s);})();">
+            Drag me to the bookmarks bar...
+          </a>
       
         </header>
-        
-        <a href="javascript: (function() {var s = document.createElement('script'); s.setAttribute('src','{{ asset_url }}/js/bookmarklet.js'); document.body.appendChild(s);})();">
-          Drag me to the bookmarks bar...
-        </a>
         
         <div id="main" role="main" class="row">
             {{yield}}

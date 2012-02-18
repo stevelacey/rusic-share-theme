@@ -33,6 +33,12 @@ $(document).ready(function(){
 	      }
 	    }, 'json');
   	});
+    
+    // STRIP LAYOUT IN BOOKMARKLET
+    if (window.location !== window.parent.location) {
+      $("#container").css({width: "100%"}).children("header").remove().end().find("#new-entry").css({width: "100%", "margin-left": 0});
+      $("body").css("padding", "10px").children("footer").remove();
+    }
   	
   	// FORMS VALIDATION
   	$("#entry_form").validate();

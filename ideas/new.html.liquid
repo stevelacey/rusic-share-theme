@@ -11,17 +11,14 @@
         <input id="title" name="idea[title]" type="text" placeholder="{{ theme.idea_context }} title" class="field required">
       </div>
       
-      <!-- Image upload -->
-      <div class="input photoupload last">
-        <label>photo</label>
-        <input type="file" id="idea_images_attributes_0_file" name="idea[images_attributes][0][file]" class="upload required" />
-      </div>
-      
       <!-- Main content -->
       <div class="input last">
         <label for="idea[content]">Message</span>
         <textarea id="content-input" name="idea[content]" class="content field required"></textarea>
       </div>
+      
+      <!-- Custom field 1 (url) -->
+      <input id="url" name="idea[custom1]" type="hidden">
       
       <!-- Share & submit -->
       <div class="input actions last">
